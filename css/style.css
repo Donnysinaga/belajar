@@ -1,0 +1,210 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background: url('background.jpg') no-repeat center center fixed;
+  background-size: cover;
+  color: #eaf3ff;
+  min-height: 100vh;
+  overflow-x: hidden;
+  position: relative;
+}
+
+/* Dark overlay agar teks jelas */
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(5, 10, 25, 0.75);
+  z-index: 0;
+}
+
+.main {
+  position: relative;
+  z-index: 1;
+  max-width: 1000px;
+  margin: 0 auto;
+  text-align: center;
+  padding: 20px;
+}
+
+/* Header */
+header h1 {
+  font-size: 2.4rem;
+  background: linear-gradient(90deg, #8ffcff, #c3a4ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 5px;
+}
+header p {
+  color: #c7d4ff;
+  margin-bottom: 25px;
+}
+
+/* Social links */
+.socials {
+  color: #b8c4ff;
+  font-size: 0.95rem;
+  margin-bottom: 5px;
+}
+.socials a {
+  color: #9fe8ff;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+.socials a:hover {
+  color: #b794ff;
+  text-shadow: 0 0 8px #b794ff;
+}
+
+/* Contract line */
+.contract-line {
+  margin-bottom: 15px;
+}
+#contractAddress {
+  color: #9fe8ff;
+  cursor: pointer;
+  font-size: 0.95rem;
+  transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+#contractAddress:hover {
+  color: #b794ff;
+  text-shadow: 0 0 10px #9fe8ff;
+}
+
+/* Copy notif */
+.copy-notif {
+  color: #7f5af0;
+  font-size: 0.85rem;
+  margin-bottom: 20px;
+  display: block;
+  opacity: 1;
+  transition: opacity 0.5s ease;
+}
+.hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* Market grid */
+.market-title {
+  color: #b794ff;
+  margin: 25px 0 15px;
+  font-size: 1.3rem;
+}
+.market-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 12px;
+  margin-bottom: 40px;
+}
+.market-grid div {
+  background: rgba(255, 255, 255, 0.06);
+  border-radius: 12px;
+  padding: 12px;
+  text-align: left;
+  transition: background 0.3s ease;
+}
+.market-grid div:hover {
+  background: rgba(255, 255, 255, 0.12);
+}
+.market-grid h3 {
+  font-size: 1rem;
+  color: #9fe8ff;
+  margin-bottom: 4px;
+}
+.market-grid .price {
+  font-weight: 600;
+}
+.market-grid .change {
+  font-size: 0.9rem;
+}
+
+/* Analyzer */
+.analyzer {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin: 30px auto;
+  max-width: 500px;
+}
+#tokenInput {
+  padding: 14px;
+  border: none;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+  font-size: 1rem;
+  outline: none;
+  transition: box-shadow 0.3s ease;
+}
+#tokenInput:focus {
+  box-shadow: 0 0 10px #9fe8ff;
+}
+#analyzeBtn {
+  background: linear-gradient(90deg, #7f5af0, #00baff);
+  border: none;
+  padding: 14px;
+  border-radius: 12px;
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+#analyzeBtn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 12px #9fe8ff;
+}
+
+/* Result box */
+.result {
+  background: rgba(255, 255, 255, 0.07);
+  border-radius: 12px;
+  padding: 20px;
+  margin-top: 15px;
+  text-align: left;
+  animation: fadeIn 0.5s ease;
+}
+.result h3 {
+  color: #9fe8ff;
+  margin-bottom: 8px;
+}
+
+/* Footer */
+footer {
+  margin-top: 40px;
+  font-size: 0.9rem;
+  color: #c0caff;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive */
+@media (max-width: 650px) {
+  header h1 {
+    font-size: 1.8rem;
+  }
+  .market-grid {
+    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+  }
+  #analyzeBtn,
+  #tokenInput {
+    font-size: 0.95rem;
+  }
+}

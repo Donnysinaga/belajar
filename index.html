@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CODE RELIC | AN AI EXPERIMENT</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <div class="overlay"></div>
+  <div class="main">
+    <header>
+      <h1 class="glitch" data-text="CODE RELIC">CODE RELIC</h1>
+      <p>AN AI EXPERIMENT</p>
+    </header>
+
+    <!-- Social links -->
+    <div class="socials">
+      <a href="https://t.me/coderelic" target="_blank">Telegram</a> •
+      <a href="https://x.com/coderelic" target="_blank">X</a>
+    </div>
+
+    <!-- Contract -->
+    <div class="contract-line">
+      <span id="contractAddress">
+        So1aNa
+      </span>
+    </div>
+    <span id="copyNotif" class="copy-notif hidden">Copied!</span>
+
+    <h2 class="market-title">📊 Live Market Overview (Top 10)</h2>
+    <div id="marketData" class="market-grid">Loading market data...</div>
+
+    <div class="analyzer">
+      <input
+        type="text"
+        id="tokenInput"
+        placeholder="Enter token name or contract address…"
+      />
+      <button id="analyzeBtn">Analyze</button>
+    </div>
+
+    <div id="resultBox" class="result hidden">
+      <h3>🔍 Analysis Result</h3>
+      <p id="resultText">Processing your request…</p>
+    </div>
+
+    <footer>© 2025 CODE RELIC </footer>
+  </div>
+
+  <script src="js/script.ts"></script>
+</body>
+</html>
